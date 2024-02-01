@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <link rel="icon" type="image/icon" href="/icon/icons.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <h1>Employee Registration Form</h1>
+    </center>
+    <form action="Registration_Form.html" method="post">
+
+        <label for="FirstName">FirstName:</label>
+        <input type="text" id="name" name="name" pattern="[A-Za-z]+" title="Please enter only letters" required>
+
+        <label for="LastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" pattern="[A-Za-z]+" title="Please enter only letters" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="text" id="dob" name="dob" placeholder="DD-MM-YYYY" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter phone number" required>
+
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" required>
+
+        <label for="employeeId">Employee ID:</label>
+        <input type="text" id="employeeId" name="employeeId" required>
+
+        <button type="submit" onclick="alert('Registered successfully..!')">Register</button>
+    </form>
+</body>
+
+</html>
