@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="contact.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="https://images1-fabric.practo.com/practices/1136542/alavi-multi-speciality-hospital-hyderabad-59f94c3df3362.jpg"
+                alt="">
+        </div>
+        <div class="nav">
+
+            <a href="home.html">Home</a>
+            <a href="services.html">services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">contact us</a>
+
+        </div>
+        <div>
+            <button onclick="location.href='login.html'">Login</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+
+            <h1> contact us</h1>
+
+            <form onsubmit="sendEmail(); reset();return false">
+                <div class="name">
+
+                    <input type="text" placeholder="Enter your name" class="" id="username" required>
+                </div>
+
+                <div class="email">
+
+                    <input type="email" placeholder="Enter your email" class="" id="email" required>
+                </div>
+                <div class="number">
+
+                    <input type="phoneno" placeholder="Enter your phone number" class="" id="phone" required>
+                </div>
+                <div class="text">
+                    <textarea rows="7" cols="60" placeholder="Enter your message here..." class="" id="message" required></textarea>
+                </div>
+                <div class="btn">
+                    <button type="submit">submit</button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="icons">
+            <a href="https://www.facebook.com/AlaviHospitals.Official/"><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://ir.linkedin.com/in/alavi-hospital-aa11391b0?original_referer=https%3A%2F%2Fwww.google.com%2F"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+        </div>
+        <div class="container2">
+            <a href="">Home</a>
+            <a href="">about</a>
+            <a href="">service</a>
+            <a href="">contact</a>
+        </div>
+        <div class="copyright">
+            <p>copyright&copy;2024 reserved by Alavi hospitals</p>
+        </div>
+    </footer>
+</body>
+
+</html>
