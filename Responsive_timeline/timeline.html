@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Timeline</title>
+    <link rel="stylesheet" href="timeline.css">
+</head>
+<body>
+
+<div class="timeline">
+    <div class="container left-container">
+        <img src="gg.png">
+        <div class="text-box">
+        <h2>Google</h2>
+        <small>2018</small>
+        <p>Google LLC is an American multinational technology company focusing on artificial intelligence, online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics. </p>
+    <span class="left-container-arrow"></span>
+    </div>
+    </div>
+   <div class="timeline">
+    <div class="container right-container">
+        <img src="ap.png">
+        <div class="text-box">
+        <h2>Apple</h2>
+        <small>2019</small>
+        <p>apple LLC is an American multinational technology company focusing on artificial intelligence, online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics. </p>
+    <span class="right-container-arrow"></span>
+    </div>
+    </div>
+    <div class="timeline">
+    <div class="container left-container">
+        <img src="t.png">
+        <div class="text-box">
+        <h2>Tesla</h2>
+        <small>2020</small>
+        <p>Tesla LLC is an American multinational technology company focusing on artificial intelligence, online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics. </p>
+    <span class="left-container-arrow"></span>
+    </div>
+    </div>
+    <div class="timeline">
+    <div class="container right-container">
+        <img src="a2.png">
+        <div class="text-box">
+        <h2>Amazon</h2>
+        <small>2021</small>
+        <p>Amazon LLC is an American multinational technology company focusing on artificial intelligence, online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics. </p>
+   <span class="right-container-arrow"></span>
+    </div>
+    </div>
+    <div class="timeline">
+    <div class="container left-container">
+        <img src="fl.png">
+        <div class="text-box">
+        <h2>flipkart</h2>
+        <small>2022</small>
+        <p>flipkart LLC is an American multinational technology company focusing on artificial intelligence, online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics. </p>
+    <span class="left-container-arrow"></span>
+    </div>
+    </div>
+</div>
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const containers = document.querySelectorAll('.container');
+
+        containers.forEach((container, index) => {
+            container.style.opacity = '0';
+            container.style.transition = `opacity 1s ${index}s`;
+            setTimeout(() => {
+                container.style.opacity = '1';
+            }, 100); 
+        });
+    });
+</script>
+</body>
+</html>
