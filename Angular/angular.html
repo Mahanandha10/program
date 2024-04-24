@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <link rel="stylesheet" href="angular.css">
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <div class="forms">
+        <h1>Registration Forms</h1>
+        <form ng-submit="submitForm()">
+            <p>FirstName : <input type="text" ng-model="fname" maxlength="10" required> </p>
+            <p>LastName : <input type="text" ng-model="lname" maxlength="10" required> </p>
+            <input type="submit"  class="sub" required>
+        </form>
+        <h2 ng-if="submitted">Thank you ..!  {{fname + ' ' + lname}} form successfully submitted</h2>
+    </div>
+    <script>
+        angular.module('myApp', [])
+            .controller('myController', function ($scope) {
+                $scope.submitForm = function () {
+                    $scope.submitted = true; 
+                    document.getElementById('lname').focus();
+                };
+            });
+    </script>
+</body>
+</html>

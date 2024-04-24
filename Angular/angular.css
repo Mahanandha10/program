@@ -1,0 +1,15 @@
+.forms {
+    text-align: center;
+    border: solid 2px;
+    width: 20%;
+    margin: 30px auto;
+     color: hsl(31, 85%, 45%);
+
+   
+}
+.forms .sub{
+    margin-bottom: 30px;
+    color: hsl(4, 96%, 49%);
+    background-color: hsl(0, 0%, 100%);
+}
+
